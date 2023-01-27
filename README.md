@@ -24,7 +24,7 @@ To try out this example make sure that you have the following installed on your 
 ### 2. Clone Repository
 Clone the repository to your computer:
 
-`git clone`
+`git clone https://github.com/ocni-dtu/okobau_example.git`
 
 ### 3. Install Python Requirements
 
