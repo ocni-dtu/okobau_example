@@ -6,7 +6,7 @@ It is a publicly accessible platform that allows users to search for EPD based o
 Ökobaudat provides an API (Application Programming Interface) that allows developers to access and retrieve data from
 the database programmatically.
 
-In the slides there is an example of how to use Python with the "requests" library to access the Ökobaudat API.
+This repository is an example of how to use Python with the "requests" library to access the Ökobaudat API.
 
 Whether you're an architect, builder or anyone else in the industry, Ökobaudat is a great tool to help you find
 sustainable building materials and products that meet your specific needs.
