@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 requests = "*"
+epdx = "*"
+pydantic = "<2.0"
 
 [dev-packages]
 
