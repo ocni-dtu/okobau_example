@@ -1,6 +1,4 @@
-import requests
-
-OKOBAU_URL = "https://oekobaudat.de/OEKOBAU.DAT/resource/datastocks/cd2bda71-760b-4fcc-8a0b-3877c10000a8"
+from shared import get_epds
 
 
 def parse_epd_list(data: dict):
@@ -13,11 +11,7 @@ def parse_epd_list(data: dict):
 def list_epds():
     """Lists EPDs in the Ökobau database"""
 
-    response = requests.get(f"{OKOBAU_URL}/processes?format=json")
-    response.raise_for_status()
-    data = response.json()
-
-    print(f"Retrieved {data.get('pageSize')} EPDs out of {data.get('totalCount')} from Ökobau")
+    data = get_epds()
     parse_epd_list(data)
 
 

@@ -1,20 +1,15 @@
 import json
 
-import requests
-
-OKOBAU_URL = "https://oekobaudat.de/OEKOBAU.DAT/resource/datastocks/cd2bda71-760b-4fcc-8a0b-3877c10000a8"
+from shared import get_full_epd
 
 
-def fetch_epd_data(uuid: str):
+def get_epd_by_id(uuid: str):
     """Fetches the data of a specific EPD given its UUID"""
-    response = requests.get(f"{OKOBAU_URL}/processes/{uuid}?format=json&view=extended")
-
-    response.raise_for_status()
-    data = response.json()
+    data = get_full_epd(uuid)
 
     print(json.dumps(data, indent=4))
 
 
 if __name__ == '__main__':
     epd_id = "8be9edb5-c5b9-4be1-bfb8-b096f24a183b"
-    fetch_epd_data(epd_id)
+    get_epd_by_id(epd_id)
