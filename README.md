@@ -11,7 +11,7 @@ This repository is an example of how to use Python with the "requests" library t
 Whether you're an architect, builder or anyone else in the industry, Ökobaudat is a great tool to help you find
 sustainable building materials and products that meet your specific needs.
 
-![List EPDs](list_epds.png)
+![List EPDs](public/list_epds.png)
 
 # Using this Repository
 
@@ -34,11 +34,39 @@ Clone the repository to your computer:
 
 ### 4. Run the Code!
 
+#### 4.1 List EPDs
 To get a list of EPDs in the Ökobau database use the `list_epds.py` file:
 
-`python src/list_epds.py`
+```bash
+python src/list_epds.py
+```
 
+![List EPDs](public/list_epds.png)
+
+#### 4.2 Fetch a Single EPD
 If you wish to obtain information on a specific EPD then use the `fetch_epd.py` file.
 **NOTE** that you need to update `epd_id` variable the file to the `uuid` of the EPD that you wish to get information on.
 
-`python src/fetch_epd.py`
+```bash
+python src/fetch_epd.py
+```
+
+![Fetch EPD](public/fetch_epd.png)
+
+#### 4.3 Download and Save EPDs
+To download and save EPDs from Ökobau to disk run:
+
+```bash
+python src/download_epds.py
+```
+
+![Download EPDs](public/download_epds.png)
+
+### 4.4 Convert to EPDx
+To convert EPDs from Ökobau into [EPDx](https://github.com/ocni-dtu/epdx) run:
+
+```bash
+python src/to_epdx.py
+```
+
+![To EPDx](public/to_epdx.png)

@@ -16,8 +16,10 @@ def to_epdx():
         epd_str = get_full_epd_str(_epd.get("uuid"))
 
         # Turn EPD into EPDx JSON string that can be saved to disk.
-        epdx_str = epdx.convert_ilcd(epd_str, as_type='str')
-        (folder / f"{_epd.get('uuid')}.epdx.json").write_text(epdx_str)
+        epdx_str = epdx.convert_ilcd(epd_str,
+                                     as_type='str')
+        ((folder / f"{_epd.get('uuid')}.epdx.json")
+         .write_text(epdx_str))
 
         # Turn EPD into EPDx dict
         epdx_dict = epdx.convert_ilcd(epd_str)
@@ -25,7 +27,8 @@ def to_epdx():
         print(epdx_dict)
 
         # Turn EPD into an EPDx Pydantic Class
-        epdx_pydantic = epdx.convert_ilcd(epd_str, as_type='pydantic')
+        epdx_pydantic = epdx.convert_ilcd(epd_str,
+                                          as_type='pydantic')
         print('\nEPDx Pydantic')
         print(epdx_pydantic)
         print("---------\n")
