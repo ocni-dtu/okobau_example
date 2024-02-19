@@ -9,7 +9,7 @@ OKOBAU_URL = "https://oekobaudat.de/OEKOBAU.DAT/resource/datastocks/cd2bda71-760
 def get_epds(limit=10) -> dict:
     """Get EPDs from Ökobau"""
 
-    response = requests.get(f"{OKOBAU_URL}/processes?format=json&limit={limit}")
+    response = requests.get(f"{OKOBAU_URL}/processes?format=json&pageSize={limit}")
     response.raise_for_status()
     data = response.json()
 
