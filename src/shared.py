@@ -3,7 +3,7 @@ from pathlib import Path
 
 import requests
 
-OKOBAU_URL = "https://oekobaudat.de/OEKOBAU.DAT/resource/datastocks/cd2bda71-760b-4fcc-8a0b-3877c10000a8"
+OKOBAU_URL = "https://oekobaudat.de/OEKOBAU.DAT/resource/datastocks/c391de0f-2cfd-47ea-8883-c661d294e2ba"
 
 
 def get_epds(limit=10) -> dict:
